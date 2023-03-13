@@ -1,0 +1,18 @@
+{
+    "WINDOW_LENGTH_SECONDS": 1000,
+    "OVERLAP_SECONDS": 500,
+
+    "BASELINE_LENGTH_SECONDS": 4000,
+    "BASELINE_PROBABILITY": 1,
+    "ANOMALY_THRESHOLD": 0.1,
+
+    "VECTOR_CONFIG_FILE_NAME": "data_vectorization_config.json",
+
+    "RAW_DATA_FILE_NAME": "raw.csv",
+    "RAW_DATA_FORMAT": "csv",
+
+    "TIME_FIELD_NAME": "_time",
+    "TIME_FORMAT": "epoch",
+    
+    "TOTAL_RECORDS": 20000
+}

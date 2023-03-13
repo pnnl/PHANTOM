@@ -1,0 +1,57 @@
+{
+    "VECTOR": {
+        "count_unique_username": {
+            "strategy": "count_unique",
+            "field": "username"
+        },
+
+        "count_values_action": {
+            "strategy": "count_values",
+            "field": "action",
+            "values": ["allowed", "disallowed"],
+            "include_other": true
+        },
+
+        "min_value_bigNumber": {
+            "strategy": "min_value",
+            "field": "bigNumber"
+        },
+        "max_value_smallNumber": {
+            "strategy": "max_value",
+            "field": "smallNumber"
+        },
+
+        "mean_value_packetBytes": {
+            "strategy": "mean_values",
+            "field": "packetBytes"
+        },
+        "median_value_packetBytes": {
+            "strategy": "median_values",
+            "field": "packetBytes"
+        },
+        "mode_value_packetBytes": {
+            "strategy": "mode_values",
+            "field": "packetBytes"
+        },
+        "sum_value_packetBytes": {
+            "strategy": "sum_values",
+            "field": "packetBytes"
+        },
+
+        "where_pan_allowed": {
+            "strategy": "count_grouping",
+            "fields": {
+                "sourceType": ["pan:traffic", "pan:threat"],
+                "action": ["allowed"]
+            }
+        },
+        "where_user_disallowed_ssl": {
+            "strategy": "count_grouping",
+            "fields": {
+                "username": ["rareUser"],
+                "action": ["disallowed"],
+                "app": ["ssl"]
+            }
+        }
+    }
+}
